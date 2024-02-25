@@ -1,0 +1,162 @@
+@import "_fonts.scss";
+@import "_variables.scss";
+
+* {
+    background-color: $primary-color-2;
+    box-sizing: border-box;
+    font-family: assistant-regular;
+    color: $text-color-1;
+}
+
+body {
+    margin: 0;
+    h1 {
+        text-align: center;
+    }
+    h2 {
+        text-align: center;
+        margin-left: 10px;
+    }
+    h3 {
+        margin-left: 10px;
+    }
+    p {
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+#IntroPic img {
+    border: 5px solid #000000;
+    margin-top: 50px;
+    width: 80%;
+}
+#InstrucPics img {
+    width: 80%;
+    border: 5px solid #000000;
+}
+.Introduction {
+    height: 100vh;
+    margin-bottom: 50px;
+    background-color: $tertiary-color-2;
+
+    ul {
+        background-color: inherit;
+        
+    }
+    li {background-color: inherit;
+    }
+    h1 {
+        background-color: inherit;
+        margin-top: 0;
+    }
+    h3 {background-color: inherit;}
+
+    
+}
+
+.Instruction {
+    padding-bottom: 2.5%;   
+}
+
+li {
+    padding: 10px;
+    font-size: large;
+}
+
+p {
+    font-size: large;
+}
+
+.down-arrow {
+    position: absolute;
+    top: calc(100vh - 150px);
+    left: calc(50% - 14px);
+    width: 0;
+    height: 30px;
+    border: 2px solid;
+    border-radius: 2px;
+    animation: jumpInfinite 1.5s infinite;
+}
+  
+.down-arrow:after {
+    content: " ";
+    position: absolute;
+    top: 12px;
+    left: -10px;
+    width: 16px;
+    height: 16px;
+    border-bottom: 4px solid;
+    border-right: 4px solid;
+    border-radius: 4px;
+    transform: rotateZ(45deg);
+}
+
+  
+
+@keyframes jumpInfinite {
+    0% {
+      margin-top: 0;
+    }
+    50% {
+      margin-top: 20px;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+.column a {
+    text-decoration: none;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the counter cards */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    background-color: $tertiary-color-2;
+}
+
+.column1 {
+    float: left;
+    width: 50%;
+    padding-right: 10px;
+  }
+  
+  /* Clear floats after the columns */
+  .row1:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+        text-decoration: none;
+    }
+    .column a {
+        text-decoration: none;
+    }
+}
